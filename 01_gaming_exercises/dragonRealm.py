@@ -8,12 +8,11 @@ import datetime
 
 # Saving Data To A File
 # Step 1 -- Create the file name to use.
-logFileName = "dragonRealmLog" + str(time.time()) + ".txt"
-# logFileName ="dragonrealm"
+logFileName = "dragonRealmLog.txt"
 #Example: dragonRealLog1132AM.txt
 
 # Step 2 -- Create / open the file to save the data
-saveData = open(logFileName, "x") 
+saveData = open(logFileName, "a") 
 # FILE MODES
 # "x" Creates File, If File Exists, Exit With Error Message,.
 # "w" Creates File, If File Exists, Erase And Overwrite File Contents.
@@ -23,12 +22,12 @@ saveData.write("Game Started" + " " + str(datetime.datetime.now()) + "\n" )
 
 def displayIntro():
 
-    print('You are in a land full of dragons. In front of you,')
-    print('you see three paths. On one path, the dragon is friendly')
-    print('and will share his treasure with you. The other dragon')
-    print('is greedy and hungry, and will eat you on sight.')
-    print('The final dragon will lead you home')
-    print('because it does not wish to deal with humans.')
+    print('You are in a land full of monsters on a quest for buried treasure. In front of you,')
+    print('you see three paths. On one path, the monsters are helpful.')
+    print('and will share their treasure map with you. The other monsters')
+    print('are ruthless, and will tear you apart aggressively on sight.')
+    print('The final group will lead you home while youre blindfolded')
+    print('because they do not wish to deal with humans.')
     print()
 
 def choosePath():
@@ -44,19 +43,28 @@ def checkPath(chosenPath):
     time.sleep(2)
     print('It is dark and spooky...')
     time.sleep(2)
-    print('A large dragon jumps out in front of you! He opens his jaws and...')
+    print('A group of monsters look at you and...')
     print()
     time.sleep(2)
 
-    safePath = random.randint(1, 3)
-
-    if chosenPath == str('1'):
-        print('Gives you his treasure!')
-    elif chosenPath == str('2'):
-        print('Flies you out of the forest')
-    elif chosenPath == str ('3'):
-        print('Gobbles you down in one bite!')
+    if chosenPath == ('1'):
+        print('Give you a map to a dragons lair.')
+    elif chosenPath == ('2'):
+        print('Rip you to shreds leaving only your skinned flesh to remain!')
+    elif chosenPath == ('3'):
+        print('Tie you up and blidnfold you, leaving you to wake back up outside the forest.')
     
+    time.sleep(2)
+    if chosenPath == ('1'):
+        print('You wander farther ahead to where the map leads and discover an X hat marks the spot.')
+        time.sleep(2)
+        print('You dig and dig until you hear a thud, finally you found the treasure you were searching for.')
+    elif chosenPath == ('2'):
+        print('You lie there waiting for what feels like an eternity.')
+        time.sleep(2)
+        print('Your body starts feeling colder and you start feeling sleepy')
+        time.sleep(2)
+        print('eventually, your eyes close and your body starts to evaporate into the mist leaving no trace of you left.')
 
 playAgain = 'yes'
 
@@ -67,5 +75,7 @@ while playAgain == 'yes' or playAgain == 'y':
     print('Do you want to play again? (yes or no)')
     playAgain = input()
 
+
 # Close File
+saveData.write("END OF GAME LOG\n\n")
 saveData.close()
