@@ -50,14 +50,13 @@ def checkPath(chosenPath):
 
     safePath = random.randint(1, 3)
 
-    if chosenPath == str(safePath):
+    if chosenPath == str('1'):
         print('Gives you his treasure!')
-    elif chosenPath == str():
+    elif chosenPath == str('2'):
         print('Flies you out of the forest')
-    else:
+    elif chosenPath == str ('3'):
         print('Gobbles you down in one bite!')
-
-
+    
 
 playAgain = 'yes'
 
