@@ -1,5 +1,6 @@
 # Dragon Realm, <STUDENT_NAME>, v0.0
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
+# Good job so far.  The only thing I see immediately is you need to at least one item / weapon for the player to select. 
 
 # Module Import
 import random
