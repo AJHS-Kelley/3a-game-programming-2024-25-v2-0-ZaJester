@@ -24,11 +24,9 @@ saveData.write("Game Started" + " " + str(datetime.datetime.now()) + "\n" )
 def displayIntro():
 
     print('You are in a land full of monsters on a quest for buried treasure. In front of you,')
-    print('you see three paths. On one path, the monsters are helpful.')
-    print('and will share their treasure map with you. The other monsters')
-    print('are ruthless, and will tear you apart aggressively on sight.')
-    print('The final group will lead you home while youre blindfolded')
-    print('because they do not wish to deal with humans.')
+    print('you see three paths. On one path, a gloomy atmosphere that makes you feel uneasy.')
+    print('The next path has a misty atmosphere bluring your sense of direction.')
+    print('The final path has an overwhelming atmosphere, this cause your heart to race.')
     print()
 
 def choosePath():
@@ -42,18 +40,18 @@ def choosePath():
 def checkPath(chosenPath):
     print('You approach the path...')
     time.sleep(2)
-    print('It is dark and spooky...')
+    print('You feel as if you\'re being watched...')
     time.sleep(2)
-    print('A group of monsters look at you and...')
+    print('Suddenly you wander too far and...')
     print()
     time.sleep(2)
 
     if chosenPath == ('1'):
-        print('Give you a map to a dragons lair.')
+        print('Find a group of goblins that give you the map to their treaure.')
     elif chosenPath == ('2'):
-        print('Rip you to shreds leaving only your skinned flesh to remain!')
+        print('Get ripped to shreds by a group of Orcs leaving only your skinned flesh to remain!')
     elif chosenPath == ('3'):
-        print('Tie you up and blidnfold you, leaving you to wake back up outside the forest.')
+        print('Fall into a lake full of beautiful mermaids.')
     
     time.sleep(2)
     if chosenPath == ('1'):
@@ -66,6 +64,20 @@ def checkPath(chosenPath):
         print('Your body starts feeling colder and you start feeling sleepy')
         time.sleep(2)
         print('eventually, your eyes close and your body starts to evaporate into the mist leaving no trace of you left.')
+    elif chosenPath == ('3'):
+        print('Despite this, you feel as if you should try to swim away.')
+        time.sleep(2)
+        print('You notice something underneath the water constantly circling you,')
+        time.sleep(2)
+        print('suddendly you feel something tugging your leg pulling you closer and closer towards the bottom')
+        time.sleep(2)
+        print('You try to resist but whatever is pulling you is too strong.')
+        time.sleep(2)
+        print('You start to struggle, you are losing oxygen.')
+        time.sleep(2)
+        print('Your eyes slowly close but before you go out you see the culprit of your downfall.')
+        time.sleep(1)
+        print('Those beautiful woman laying across the rocks weren\'t mermaids, they were sirens.')
 
 playAgain = 'yes'
 
