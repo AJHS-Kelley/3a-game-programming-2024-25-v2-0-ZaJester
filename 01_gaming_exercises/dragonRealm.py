@@ -21,12 +21,14 @@ saveData = open(logFileName, "a")
 
 saveData.write("Game Started" + " " + str(datetime.datetime.now()) + "\n" )
 
+items = 0
+
 def displayIntro():
 
     print('You are in a land full of monsters on a quest for buried treasure. In front of you,')
     print('you see three paths. On one path, a gloomy atmosphere that makes you feel uneasy.')
-    print('The next path has a misty atmosphere bluring your sense of direction.')
-    print('The final path has an overwhelming atmosphere, this cause your heart to race.')
+    print('The next path has a misty atmosphere blurring your sense of direction.')
+    print('The final path has an overwhelming atmosphere, this causes your heart to race.')
     print()
 
 def choosePath():
@@ -52,8 +54,8 @@ def checkPath(chosenPath):
         print('Get ripped to shreds by a group of Orcs leaving only your skinned flesh to remain!')
     elif chosenPath == ('3'):
         print('Fall into a lake full of beautiful mermaids.')
-    
-    time.sleep(2)
+        time.sleep(2)
+
     if chosenPath == ('1'):
         print('You wander farther ahead to where the map leads and discover an X hat marks the spot.')
         time.sleep(2)
@@ -83,11 +85,16 @@ playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
+    item = input("Please type the number of the weapon you wish to choose, [1]Shotgun [2]Torch")
+    if item == '1':
+        hasShotgun = True
+    if item == '2':
+        hasTorch = True
+        
     locationNumber = choosePath()
     checkPath(locationNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
-
 
 # Close File
 saveData.write("END OF GAME LOG\n\n")
