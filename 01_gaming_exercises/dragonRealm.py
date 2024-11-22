@@ -77,7 +77,7 @@ def checkPath(chosenPath):
         time.sleep(2)
         print('Your eyes slowly close but before you go out you see the culprit of your downfall.')
         time.sleep(1)
-        print('Those beautiful woman laying across the rocks weren\'t mermaids, they were sirens.')
+        print('Those beautiful women laying across the rocks weren\'t mermaids, they were sirens.')
 
 playAgain = 'yes'
 
