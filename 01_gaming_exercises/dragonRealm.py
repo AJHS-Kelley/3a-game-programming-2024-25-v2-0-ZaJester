@@ -81,6 +81,7 @@ def checkPath(chosenPath):
         time.sleep(1)
         print('Those beautiful women laying across the rocks weren\'t mermaids, they were sirens.')
 
+    # Confused on how to utilize items for each path
 playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
